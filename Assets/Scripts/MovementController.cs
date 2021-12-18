@@ -14,6 +14,7 @@ public class MovementController : MonoBehaviour
     int direction = 1;
     bool isJumping = false;
 
+  
     void Update()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(m_WallCheck.position, 0.1f, controller.m_WhatIsGround);
