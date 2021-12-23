@@ -8,6 +8,8 @@ public class PickupController : MonoBehaviour
     public TextMeshProUGUI ScoreText;
     private int _score = 0;
 
+    public AudioSource starSound;
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.CompareTag("Pickup"))
@@ -15,6 +17,8 @@ public class PickupController : MonoBehaviour
             _score++;
             ScoreText.SetText(_score.ToString());
             collider.gameObject.SetActive(false);
+
+            starSound.Play();
             //GameObject[] pickups = GameObject.FindGameObjectsWithTag("Pickup");
             //if (pickups.Length == 0)
             //{
