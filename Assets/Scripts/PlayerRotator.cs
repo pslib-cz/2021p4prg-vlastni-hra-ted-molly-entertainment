@@ -14,7 +14,6 @@ public class PlayerRotator : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log(movementController.runSpeed);
         _sr.transform.Rotate((new Vector3(0, 0, -45) * Time.fixedDeltaTime) * (movementController.runSpeed / 2));
     }
 }
